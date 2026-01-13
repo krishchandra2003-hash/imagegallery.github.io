@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+         <title>Image gallery with drop Down menu</title>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width", initial-scale="1.0">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+         <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+           
+            .menu-bar{
+                background-color: rgba(0, 0, 0, 0.7);
+                text-align: center;
+                background-image: url('bcimg.png');
+                background-size: cover;
+                background-position: center;
+                opacity: 1;
+                font-family: sans-serif;
+                height: 500px;
+                
+            }
+            .menu-bar ul{
+                display: inline-flex;
+                list-style: none;
+                color: white;
+            }
+            .menu-bar ul li{
+                width: 120px;
+                margin: 15px;
+                padding: 15px;
+            }
+            .menu-bar ul li a{
+                text-decoration: none;
+                color: white;
+            }
+            .active,.menu-bar ul li:hover{
+                background-color: rgb(230, 198, 198);
+                border-radius: 10px;
+                transition: 0.5s;
+            }
+            .menu-bar .fa{
+                margin-right:8px; 
+            }
+            .sub-menu1{
+                display:none ;
+            }
+            .menu-bar ul li:hover .sub-menu1{
+                display: block;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.7);
+                margin-top: 15px;
+                margin-left: -15px;
+                border-radius: 10px;
+            }
+            .menu-bar ul li:hover .sub-menu1 ul{
+                display: block;
+                margin: 10px;
+            }
+            .menu-bar ul li:hover .sub-menu1 ul li{
+                width: 150px;
+                padding: 10px;
+                border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+                background: transparent;
+                border-radius:0;
+                text-align: left;
+            }
+            .menu-bar ul li:hover .sub-menu1 ul li:last-child{
+                border-bottom: none;
+            }
+            .menu-bar ul li:hover .sub-menu1 ul li a:hover{
+                color: rgb(230, 198, 198);
+            }
+            .content{
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: white;
+            }
+            .content h1{
+                font-size: 50px;
+                margin-bottom: 10px;
+                color:#22C1CE;
+                
+            }
+            .content p{
+                font-size: 20px;
+                margin-bottom: 20px;
+                line-height: 1.5;
+                color: white;
+            }
+            .content button{
+                padding: 10px 30px;
+                font-size: 18px;
+                border: none;
+                background-color: #22c1ce;
+                color: rgb(4, 4, 4);
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .gallery{
+                padding: 60px;
+                background: #f4f4f4;
+                color: black;
+
+            }
+            .gallery ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                list-style: none;
+            }
+            .gallery ul li{
+                margin: 15px;
+            }
+            .gallery ul li img{
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                transition: transform 0.3s, box-shadow 0.3s;
+
+            }
+            .gallery ul li img:hover{
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+                cursor: pointer;
+
+
+            }
+       
+         </style>
+
+    </head>
+    <body>
+        
+    <div class="menu-bar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-users"></i>About</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contact</a></li>
+            <li><a href="#"><i class="fa fa-clone"></i>Services</a>
+                <div class="sub-menu1">
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-angel-list"></i>Art type</a>
+                <div class="sub-menu1">
+                    <ul>
+                        <li><a href="#">Abstract</a></li>
+                        <li><a href="#">Realism</a></li>
+                        <li><a href="#">Impressionism</a></li>
+                        <li><a href="#">Surrealism</a></li>
+                        <li><a href="#">Pop Art</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-inr"></i>Pricing</a></li>
+        </ul> 
+        </div>
+        <div class="content">
+            <h1>EXPLORE THE IMAGE</h1>
+            <p>Discover a world of stunning visuals in our image gallery. Browse through a curated collection of high-quality images that inspire and captivate.</p>
+            <button>LEARN MORE</button>
+        </div>
+
+        </div>
+        <div class="gallery">
+            <h1 style="text-align: center;">-----------------------OUR GALLERY----------------------</h1><br><br>
+            <ul>
+                <li><img src="img1.jpg" alt="Image 1"></li>
+                <li><img src="img2.jpg" alt="Image 2"></li>
+                <li><img src="img3.jpg" alt="Image 3"></li>
+                <li><img src="img4.jpg" alt="Image 4"></li>
+                <li><img src="img5.jpg" alt="Image 5"></li>
+                <li><img src="img6.png" alt="Image 6"></li>
+                <li><img src="img7.jpg" alt="Image 7"></li>
+                <li><img src="image1.png" alt="Image 8"></li>
+            </ul>
+        </div>
+    </body>
+   
+</html>
